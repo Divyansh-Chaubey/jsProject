@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental Website</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <input type="checkbox" name="" id="ba" />
+    <label for="ba" aria-label="Toggle Navigation Menu">
+      <i class="fa-solid fa-bars" id="bas"></i>
+    </label>
+    <header>
+      <div class="container">
+        <!-- Logo -->
+        <div class="left">
+          <a href="#" class="logo">
+            <i class="fa-solid fa-car"></i>
+          </a>
+          <h1>Rental</h1>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ride">Ride</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </nav>
+
+        <!-- Buttons -->
+        <div class="header-buttons">
+          <a href="#signup" class="btn sign-up">Sign Up</a>
+          <a href="#login" class="btn sign-in">Sign In</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Banner Section -->
+      <section id="banner">
+        <div class="inside">
+          <swiper-container
+            class="mySwiper"
+            pagination="true"
+            pagination-dynamic-bullets="true"
+          >
+            <!-- Slide 1 -->
+            <swiper-slide class="ba1">
+              <div class="form">
+                <h1>CONTINUE CAR RESERVATION</h1>
+                <form action="">
+                  <div>
+                    <label for="carType">Choose Car Type:</label>
+                    <select name="carType" id="carType">
+                      <option value="SUV">SUV</option>
+                      <option value="Sedan">Sedan</option>
+                      <option value="Hatchback">Hatchback</option>
+                      <option value="Luxury">Luxury</option>
+                      <option value="Convertible">Convertible</option>
+                      <option value="Electric">Electric</option>
+                      <option value="Hybrid">Hybrid</option>
+                      <option value="Van">Van</option>
+                      <option value="Pickup">Pickup Truck</option>
+                      <option value="Traveler">Traveler</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="name">Enter Your Name:</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="dropoff">Drop-off Location:</label>
+                    <input
+                      type="text"
+                      id="dropoff"
+                      name="dropoff"
+                      placeholder="Enter drop-off location"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="pickupDate">Pick-up Date:</label>
+                    <input type="date" id="pickupDate" name="pickupDate" />
+                  </div>
+
+                  <div>
+                    <label for="dropoffDate">Drop-off Date:</label>
+                    <input type="date" id="dropoffDate" name="dropoffDate" />
+                  </div>
+                  <button>Submit</button>
+                </form>
+              </div>
+              <div class="addver">
+                <h1>Get 15% off your rental Plan your trip now</h1>
+                <p>Treat yourself in India</p>
+              </div>
+            </swiper-slide>
+
+            <!-- Slide 2 -->
+            <swiper-slide class="ba2">
+              <div class="form">
+                <h1>CONTINUE CAR RESERVATION</h1>
+                <form action="">
+                  <div>
+                    <label for="carType">Choose Car Type:</label>
+                    <select name="carType" id="carType">
+                      <option value="SUV">SUV</option>
+                      <option value="Sedan">Sedan</option>
+                      <option value="Hatchback">Hatchback</option>
+                      <option value="Luxury">Luxury</option>
+                      <option value="Convertible">Convertible</option>
+                      <option value="Electric">Electric</option>
+                      <option value="Hybrid">Hybrid</option>
+                      <option value="Van">Van</option>
+                      <option value="Pickup">Pickup Truck</option>
+                      <option value="Traveler">Traveler</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="name">Enter Your Name:</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter your name"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="dropoff">Drop-off Location:</label>
+                    <input
+                      type="text"
+                      id="dropoff"
+                      name="dropoff"
+                      placeholder="Enter drop-off location"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="pickup">Pick-up Location:</label>
+                    <input
+                      type="text"
+                      id="pickup"
+                      name="pickup"
+                      placeholder="Enter the pick-up location"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="pickupDate">Pick-up Date:</label>
+                    <input type="date" id="pickupDate" name="pickupDate" />
+                  </div>
+
+                  <div>
+                    <label for="dropoffDate">Drop-off Date:</label>
+                    <input type="date" id="dropoffDate" name="dropoffDate" />
+                  </div>
+                  <button>Submit</button>
+                </form>
+              </div>
+              <div class="addver">
+                <h1>Get 15% off your rental Plan your trip now</h1>
+                <p>Treat yourself in India</p>
+              </div>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="CF">
+        <div class="Cen">
+          <div class="top">
+            <h1><span class="h">Central</span> Features</h1>
+            <p class="top-para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet
+              nemo expedita asperiores commodi accusantium at cum harum,
+              excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam
+              quia distinctio.
+            </p>
+          </div>
+
+          <div class="bottom">
+            <div>
+              <div class="feature">
+                <div class="ic l"><i class="fa-solid fa-trophy"></i></div>
+                <div>
+                  <h1>First Class Services</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur, in illum aperiam ullam magni eligendi?
+                  </p>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="ic l"><i class="fa-solid fa-road"></i></div>
+                <div>
+                  <h1>24/7 Road Assistance</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur, in illum aperiam ullam magni eligendi?
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <img src="./img/car-1.png" alt="Car Image" class="car-image" />
+            </div>
+
+            <div>
+              <div class="feature">
+                <div class="ic r"><i class="fa-solid fa-tag"></i></div>
+                <div>
+                  <h1>Quality at Minimum</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur, in illum aperiam ullam magni eligendi?
+                  </p>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="ic r"><i class="fa-solid fa-map-pin"></i></div>
+                <div>
+                  <h1>Free Pick-Up & Drop-Off</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur, in illum aperiam ullam magni eligendi?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section>
+        <div id="about">
+          <div class="ab-in">
+            <div class="ab-left">
+              <h1><span>Central</span> About</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                nihil illum sint facere? Laudantium mollitia tempora eius
+                molestias eveniet. Voluptas atque doloribus cum commodi veniam
+                nihil quia facere ullam deleniti!
+              </p>
+              <div class="ab-b">
+                <div class="yo">
+                  <div class="ice">
+                    <img src="./img/about-icon-1.png" alt="Vision Icon" />
+                  </div>
+                  <h1>Our Vision</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+                <div class="yo">
+                  <div class="ice">
+                    <img src="./img/about-icon-2.png" alt="Mission Icon" />
+                  </div>
+                  <h1>Our Mission</h1>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </div>
+              <p class="p2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur vitae quam deserunt possimus exercitationem incidunt
+                eligendi excepturi repellat aperiam omnis veniam distinctio,
+                laboriosam expedita. Nesciunt praesentium ab fugiat id nemo?
+              </p>
+              <div class="ab-b2">
+                <h1>17</h1>
+                <h2>Years Of Experience</h2>
+              </div>
+              <ul>
+                <li>Morbi tristique senectus</li>
+                <li>A scelerisque purus</li>
+                <li>Dictumst vestibulum</li>
+                <li>Dio aenean sed adipiscing</li>
+              </ul>
+              <div class="ab-BOT">
+                <button>More about us</button>
+                <div>
+                  <img src="./img/attachment-img.jpg" alt="Founder Image" />
+                  <h1>William Burgess</h1>
+                  <p>Carveo Founder</p>
+                </div>
+              </div>
+            </div>
+            <div class="ab-right">
+              <img src="./img/about-img.jpg" alt="About Image 1" class="im-1" />
+              <img
+                src="./img/about-img-1.jpg"
+                alt="About Image 2"
+                class="im-2"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="stats">
+        <div id="stats-in">
+          <div class="stats-co">
+            <i class="fa-solid fa-thumbs-up stat-ic"></i>
+            <h1>829+</h1>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stats-co">
+            <i class="fa-solid fa-car stat-ic"></i>
+            <h1>56+</h1>
+            <p>Number of Cars</p>
+          </div>
+          <div class="stats-co">
+            <i class="fa-solid fa-building stat-ic"></i>
+            <h1>127+</h1>
+            <p>Car Center</p>
+          </div>
+          <div class="stats-co">
+            <i class="fa-solid fa-clock stat-ic"></i>
+            <h1>589+</h1>
+            <p>Total Kilometers</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="Services">
+        <div class="ser-container">
+          <h1>Cental <span> Services</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,</p>
+          <div class="ser-con">
+            <div class="ser-item">
+              <i class="fa-solid fa-phone"></i>
+              <h1>Phone Reservation</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+            </div>
+            <div class="ser-item">
+              <i class="fa-sharp fa-solid fa-money-bill"></i>
+              <h1>Special Rates</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+            </div>
+            <div class="ser-item">
+              <i class="fa-solid fa-road"></i>
+              <h1>One Way Rental</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+            </div>
+            <div class="ser-item">
+              <i class="fa-solid fa-umbrella"></i>
+              <h1>Life Insurance</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+            </div>
+            <div class="ser-item">
+              <i class="fa-solid fa-building"></i>
+              <h1>City to City</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+            </div>
+            <div class="ser-item">
+              <i class="fa-solid fa-car"></i>
+              <h1>Free Rides</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="categories">
+        <div class="sa-con">
+          <h1>Our Categories</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat veritatis omnis cum praesentium incidunt distinctio qui? Quis, temporibus animi corporis minima, aliquid vitae eaque dignissimos, odio cupiditate doloremque tempora ducimus.
+          </p>
+          <div class="ban">
+            <swiper-container
+            class="mySwiper"
+            pagination="true"
+            pagination-clickable="true"
+            slides-per-view="auto"
+            space-between="20"
+          >
+              <swiper-slide>
+                <div class="slide-content">
+                  <img src="./img/car-1.png" alt="Car 1" />
+                  <h2>Car Model 1</h2>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="slide-content">
+                  <img src="./img/car-2.png" alt="Car 2" />
+                  <h2>Car Model 2</h2>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="slide-content">
+                  <img src="./img/car-3.png" alt="Car 3" />
+                  <h2>Car Model 3</h2>
+                </div>
+              </swiper-slide>
+              <swiper-slide>
+                <div class="slide-content">
+                  <img src="./img/car-4.png" alt="Car 4" />
+                  <h2>Car Model 4</h2>
+                </div>
+              </swiper-slide>
+            </swiper-container>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  </body>
+</html>
