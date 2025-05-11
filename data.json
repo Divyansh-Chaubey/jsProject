@@ -1,4 +1,24 @@
 {
-
-    
+  "bookings": [
+    {
+      "id": 1,
+      "carType": "SUV",
+      "name": "John Doe",
+      "pickupLocation": "New York",
+      "dropoffLocation": "Boston",
+      "pickupDate": "2025-05-15",
+      "dropoffDate": "2025-05-20",
+      "price":"500"
+    },
+    {
+      "id": 2,
+      "carType": "Sedan",
+      "name": "Jane Smith",
+      "pickupLocation": "Los Angeles",
+      "dropoffLocation": "San Francisco",
+      "pickupDate": "2025-05-18",
+      "dropoffDate": "2025-05-22",
+      "price":"500"
+    }
+  ]
 }

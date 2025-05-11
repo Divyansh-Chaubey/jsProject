@@ -1,0 +1,169 @@
+:root {
+    --main-color: #fe5b3d;
+    --second-color: #fe5b3d;
+    --text-color: #fe5b3d;
+    --gradient: linear-gradient(#fe5b3d, #ffac38);
+    --bg-color: #1f2e4e;
+}
+
+
+
+
+
+
+
+#background,
+      #background-2 {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.075);
+        position: fixed;
+        z-index: 9999999;
+        backdrop-filter: blur(2px);
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #background .container {
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+        background-color: rgb(255 255 255 / 76%);
+        width: 60vh;
+        height: 70vh;
+        backdrop-filter: blur(2px);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        padding: 20px;
+      }
+      
+      #background .container > h1 {
+          align-self: center;
+          font-size: xxx-large;
+          color: var(--main-color);
+        }
+        #background .container form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+        }
+        #background .container form div {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.075);
+            border-radius: 10px;
+            width: 100%; /* Make it responsive */
+            max-width: 495px; /* Limit the maximum width */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            margin-top: 10px;
+            backdrop-filter: blur(4px);
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            flex-wrap: wrap;
+            box-sizing: border-box; /* Ensure padding doesn't affect width */
+        }
+        #background .container form div input {
+            padding: 10px;
+            border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+    }
+    
+    #background .container form button {
+        padding: 10px;
+        background-color:var(--main-color);
+        color:white;
+        border: var(--second-color);
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 20% ;
+        align-self: center;
+    }
+    
+    #background .container form button:hover {
+        background-color: white;
+        color: var(--main-color);
+    }
+    
+    
+    #background-2 {
+        display: none;
+    }
+    
+    #background-2 .container {
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+        background-color: rgb(255 255 255 / 76%);
+        width: 60vh;
+        height: 70vh;
+        backdrop-filter: blur(2px);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        padding: 20px;
+    }
+    #background-2 .container > h1 {
+        align-self: center;
+        font-size: xxx-large;
+        color: var(--main-color);
+    }
+    #background-2 .container form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    #background-2 .container form div {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.075);
+        border-radius: 10px;
+        width: 495px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        margin-top: 10px 0;
+        backdrop-filter: blur(4px);
+        padding: 10px;
+        border-bottom: 1px solid #ccc; 
+    }
+    #background-2 .container form div input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+    }
+    
+    #background-2 .container form button {
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    #background-2 .container form button:hover {
+        background-color: #0056b3;
+    }
+    
+    #background{
+        display: none;
+    }
+    
+    
+    .cross{
+    position: fixed;
+    right: 22px;
+    font-size: 29px;
+    }

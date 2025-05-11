@@ -1,442 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Car Rental Website</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-  </head>
 
-  <body>
-    <!-- Navigation -->
-    <input type="checkbox" name="" id="ba" />
-    <label for="ba" aria-label="Toggle Navigation Menu">
-      <i class="fa-solid fa-bars" id="bas"></i>
-    </label>
-    <header>
-      <div class="container">
-        <!-- Logo -->
-        <div class="left">
-          <a href="#" class="logo">
-            <i class="fa-solid fa-car"></i>
-          </a>
-          <h1>Rental</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Rental Website</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./sign_up.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+
+<body>
+  <!-- signup start -->
+
+  <div id="background">
+    <div class="container">
+        <i class="fa-solid fa-xmark cross" onclick="hideSignUp()"></i>
+      <h1>welcome !</h1>
+      <form action="#" method="POST" onsubmit="return sub()">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Username" required />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="signup-email" name="email" placeholder="Email" required />
+        </div>
+        <p id="err"></p>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="signup-password" name="password" placeholder="Enter-Password" required />
+        </div>
+        <div>
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password"
+            required />
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>
+        Already have an account? <a href="#" onclick="showLogin()">Login</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- signup end -->
+
+  <!-- login  -->
+  <div id="background-2">
+    <div class="container">
+      <i class="fa-solid fa-xmark cross" onclick="hideLogIn()"></i>
+      <h1>Login</h1>
+      <form action="/index.html" onsubmit="return login()">
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="login-email" name="email" placeholder="Email" required />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="login-password" name="password" placeholder="Password" required />
+        </div>
+        <p id="login-err"></p>
+        <button type="submit">Login</button>
+      </form>
+      <p>
+        Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a>
+      </p>
+    </div>
+  </div>
+  
+  <!-- login end -->
+
+
+
+  <!-- Navigation -->
+  <input type="checkbox" name="" id="ba" />
+  <label for="ba" aria-label="Toggle Navigation Menu">
+    <i class="fa-solid fa-bars" id="bas"></i>
+  </label>
+  
+  <!-- header  -->
+  
+  <header id="home">
+    <div class="container">
+      <!-- Logo -->
+      <div class="left">
+        <a href="#" class="logo">
+          <i class="fa-solid fa-car"></i>
+        </a>
+        <h1>Rental</h1>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#categories">Ride</a></li>
+          <li><a href="#Services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </nav>
+
+      <!-- Buttons -->
+      <div class="header-buttons">
+        <a href="#signup" class="btn sign-up" onclick="showLogin()">Login</a>
+        <a href="#login" class="btn sign-in" onclick="showSignUp()">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner Section -->
+    <section id="banner">
+      <div class="inside">
+        <swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true">
+          <!-- Slide 1 -->
+          <swiper-slide class="ba1">
+            <div class="form" data-aos="fade-right"
+     data-aos-offset="500"
+     data-aos-easing="ease-in-sine">
+              <h1>CONTINUE CAR RESERVATION</h1>
+              <form action="">
+                <div>
+                  <label for="carType">Choose Car Type:</label>
+                  <select name="carType" id="carType">
+                    <option value="SUV">SUV</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Hatchback">Hatchback</option>
+                    <option value="Luxury">Luxury</option>
+                    <option value="Convertible">Convertible</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Van">Van</option>
+                    <option value="Pickup">Pickup Truck</option>
+                    <option value="Traveler">Traveler</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="name">Enter Your Name:</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" />
+                </div>
+
+                <div>
+                  <label for="dropoff">Pick-up Location:</label>
+                  <input type="text" id="dropoff" name="dropoff" placeholder="Enter pick-up location" />
+                </div>
+                <div>
+                  <label for="dropoff">Drop-off Location:</label>
+                  <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" />
+                </div>
+
+                <div>
+                  <label for="pickupDate">Pick-up Date:</label>
+                  <input type="date" id="pickupDate" name="pickupDate" />
+                </div>
+
+                <div>
+                  <label for="dropoffDate">Drop-off Date:</label>
+                  <input type="date" id="dropoffDate" name="dropoffDate" />
+                </div>
+                <button>Submit</button>
+              </form>
+            </div>
+            <div class="addver" data-aos="fade-left"
+     data-aos-offset="550"
+     data-aos-easing="ease-in-sine">
+              <h1>Get 15% off your rental Plan your trip now</h1>
+              <p>Treat yourself in India</p>
+            </div>
+          </swiper-slide>
+
+          <!-- Slide 2 -->
+          <swiper-slide class="ba2">
+            <div class="form"     data-aos="fade-right"
+     data-aos-offset="500"
+     data-aos-easing="ease-in-sine">
+              <h1>CONTINUE CAR RESERVATION</h1>
+              <form action="">
+                <div>
+                  <label for="carType">Choose Car Type:</label>
+                  <select name="carType" id="carType">
+                    <option value="SUV">SUV</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Hatchback">Hatchback</option>
+                    <option value="Luxury">Luxury</option>
+                    <option value="Convertible">Convertible</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Van">Van</option>
+                    <option value="Pickup">Pickup Truck</option>
+                    <option value="Traveler">Traveler</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="name">Enter Your Name:</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" />
+                </div>
+
+                <div>
+                  <label for="dropoff">Drop-off Location:</label>
+                  <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" />
+                </div>
+
+                <div>
+                  <label for="pickup">Pick-up Location:</label>
+                  <input type="text" id="pickup" name="pickup" placeholder="Enter the pick-up location" />
+                </div>
+
+                <div>
+                  <label for="pickupDate">Pick-up Date:</label>
+                  <input type="date" id="pickupDate" name="pickupDate" />
+                </div>
+
+                <div>
+                  <label for="dropoffDate">Drop-off Date:</label>
+                  <input type="date" id="dropoffDate" name="dropoffDate" />
+                </div>
+                <button>Submit</button>
+              </form>
+            </div>
+            <div class="addver"   data-aos="fade-right"
+     data-aos-offset="500"
+     data-aos-easing="ease-in-sine">
+              <h1>Get 15% off your rental Plan your trip now</h1>
+              <p>Treat yourself in India</p>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="CF">
+      <div class="Cen">
+        <div class="top"  data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+          <h1><span class="h">Central</span> Features</h1>
+          <p class="top-para">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet
+            nemo expedita asperiores commodi accusantium at cum harum,
+            excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam
+            quia distinctio.
+          </p>
         </div>
 
-        <!-- Navigation Menu -->
-        <nav>
-          <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#ride">Ride</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-          </ul>
-        </nav>
+        <div class="bottom">
+          <div>
+            <div class="feature">
+              <div class="ic l"><i class="fa-solid fa-trophy"></i></div>
+              <div>
+                <h1>First Class Services</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur, in illum aperiam ullam magni eligendi?
+                </p>
+              </div>
+            </div>
+            <div class="feature"  data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+              <div class="ic l"><i class="fa-solid fa-road"></i></div>
+              <div>
+                <h1>24/7 Road Assistance</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur, in illum aperiam ullam magni eligendi?
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <!-- Buttons -->
-        <div class="header-buttons">
-          <a href="#signup" class="btn sign-up">Sign Up</a>
-          <a href="#login" class="btn sign-in">Sign In</a>
+          <div  data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+            <img src="./img/car-1.png" alt="Car Image" class="car-image" />
+          </div>
+
+          <div>
+            <div class="feature" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+              <div class="ic r"><i class="fa-solid fa-tag"></i></div>
+              <div>
+                <h1>Quality at Minimum</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur, in illum aperiam ullam magni eligendi?
+                </p>
+              </div>
+            </div>
+            <div class="feature" data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom">
+              <div class="ic r"><i class="fa-solid fa-map-pin"></i></div>
+              <div>
+                <h1>Free Pick-Up & Drop-Off</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur, in illum aperiam ullam magni eligendi?
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <!-- Banner Section -->
-      <section id="banner">
-        <div class="inside">
-          <swiper-container
-            class="mySwiper"
-            pagination="true"
-            pagination-dynamic-bullets="true"
-          >
-            <!-- Slide 1 -->
-            <swiper-slide class="ba1">
-              <div class="form">
-                <h1>CONTINUE CAR RESERVATION</h1>
-                <form action="">
-                  <div>
-                    <label for="carType">Choose Car Type:</label>
-                    <select name="carType" id="carType">
-                      <option value="SUV">SUV</option>
-                      <option value="Sedan">Sedan</option>
-                      <option value="Hatchback">Hatchback</option>
-                      <option value="Luxury">Luxury</option>
-                      <option value="Convertible">Convertible</option>
-                      <option value="Electric">Electric</option>
-                      <option value="Hybrid">Hybrid</option>
-                      <option value="Van">Van</option>
-                      <option value="Pickup">Pickup Truck</option>
-                      <option value="Traveler">Traveler</option>
-                    </select>
-                  </div>
+    <section id="about">
+      <div class="ab-left">
+        <h2   data-aos="fade-up-right"><span class="blue">Cental</span> <span class="red">About</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
 
-                  <div>
-                    <label for="name">Enter Your Name:</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Enter your name"
-                    />
-                  </div>
+        <div class="features" data-aos="fade-up-right">
+          <div class="feature-card">
+            <img src="./img/about-icon-1.png" alt="Vision Icon" />
+            <h3>Our Vision</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up-left">
+            <img src="./img/about-icon-2.png" alt="Mission Icon" />
+            <h3>Our Mission</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
 
-                  <div>
-                    <label for="dropoff">Pick-up Location:</label>
-                    <input
-                      type="text"
-                      id="dropoff"
-                      name="dropoff"
-                      placeholder="Enter pick-up location"
-                    />
-                  </div>
-                  <div>
-                    <label for="dropoff">Drop-off Location:</label>
-                    <input
-                      type="text"
-                      id="dropoff"
-                      name="dropoff"
-                      placeholder="Enter drop-off location"
-                    />
-                  </div>
+        <p class="subtext" data-aos="fade-up-left">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit...
+        </p>
 
-                  <div>
-                    <label for="pickupDate">Pick-up Date:</label>
-                    <input type="date" id="pickupDate" name="pickupDate" />
-                  </div>
+        <div class="experience-box"  data-aos="fade-up-left">
+          <h1>17</h1>
+          <p>Years Of Experience</p>
+        </div>
 
-                  <div>
-                    <label for="dropoffDate">Drop-off Date:</label>
-                    <input type="date" id="dropoffDate" name="dropoffDate" />
-                  </div>
-                  <button>Submit</button>
-                </form>
-              </div>
-              <div class="addver">
-                <h1>Get 15% off your rental Plan your trip now</h1>
-                <p>Treat yourself in India</p>
+        <ul class="benefits"  data-aos="fade-up-left">
+          <li>✅ Morbi tristique senectus</li>
+          <li>✅ A scelerisque purus</li>
+          <li>✅ Dictumst vestibulum</li>
+          <li>✅ dio aenean sed adipiscing</li>
+        </ul>
+      </div>
+
+      <div class="ab-right"   data-aos="fade-up-right">
+        <img src="./img/about-img.jpg" class="im-1" />
+        <img src="./img/about-img-1.jpg" class="im-2" />
+      </div>
+    </section>
+
+    <!-- section  -->
+    <section id="stats">
+      <div id="stats-in"   data-aos="zoom-in-up">
+        <div class="stats-co">
+          <i class="fa-solid fa-thumbs-up stat-ic"></i>
+          <h1>829+</h1>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stats-co"  data-aos="zoom-in-up">
+          <i class="fa-solid fa-car stat-ic"></i>
+          <h1>56+</h1>
+          <p>Number of Cars</p>
+        </div>
+        <div class="stats-co" data-aos="zoom-in-up"> 
+          <i class="fa-solid fa-building stat-ic"></i>
+          <h1>127+</h1>
+          <p>Car Center</p>
+        </div>
+        <div class="stats-co"  data-aos="zoom-in-up">
+          <i class="fa-solid fa-clock stat-ic"></i>
+          <h1>589+</h1>
+          <p>Total Kilometers</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="Services">
+      <div class="ser-container"   data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+        <h1>Central <span>Services</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi
+          accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+        </p>
+        <div class="ser-con">
+          <div class="ser-item"  data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom" 
+              data-aos-duration="500">
+            <i class="fa-solid fa-phone"></i>
+            <h1>Phone Reservation</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+          </div>
+          <div class="ser-item"  data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom" 
+              data-aos-duration="600">
+            <i class="fa-sharp fa-solid fa-money-bill"></i>
+            <h1>Special Rates</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+          </div>
+          <div class="ser-item"  data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom" 
+              data-aos-duration="650">
+            <i class="fa-solid fa-road"></i>
+            <h1>One Way Rental</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+          </div>
+          <div class="ser-item"  data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom" 
+              data-aos-duration="700">
+            <i class="fa-solid fa-umbrella"></i>
+            <h1>Life Insurance</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+          </div>
+          <div class="ser-item"  data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom" 
+              data-aos-duration="750">
+            <i class="fa-solid fa-building"></i>
+            <h1>City to City</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+          </div>
+          <div class="ser-item" data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom" 
+              data-aos-duration="800">
+            <i class="fa-solid fa-car"></i>
+            <h1>Free Rides</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section id="categories">
+      <div class="sa-con"  data-aos="zoom-in"  data-aos-duration="500">
+        <h1>Our Categories</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat veritatis omnis cum praesentium incidunt
+          distinctio qui? Quis, temporibus animi corporis minima, aliquid vitae eaque dignissimos, odio cupiditate
+          doloremque tempora ducimus.
+        </p>
+        <div class="ban"   data-aos="zoom-in-up"  data-aos-duration="600">
+          <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="auto"
+            space-between="20">
+            <swiper-slide>
+              <div class="slide-content">
+                <img src="./img/car-1.png" alt="Car 1" />
+                <h2>Car Model 1</h2>
               </div>
             </swiper-slide>
-
-            <!-- Slide 2 -->
-            <swiper-slide class="ba2">
-              <div class="form">
-                <h1>CONTINUE CAR RESERVATION</h1>
-                <form action="">
-                  <div>
-                    <label for="carType">Choose Car Type:</label>
-                    <select name="carType" id="carType">
-                      <option value="SUV">SUV</option>
-                      <option value="Sedan">Sedan</option>
-                      <option value="Hatchback">Hatchback</option>
-                      <option value="Luxury">Luxury</option>
-                      <option value="Convertible">Convertible</option>
-                      <option value="Electric">Electric</option>
-                      <option value="Hybrid">Hybrid</option>
-                      <option value="Van">Van</option>
-                      <option value="Pickup">Pickup Truck</option>
-                      <option value="Traveler">Traveler</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label for="name">Enter Your Name:</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Enter your name"
-                    />
-                  </div>
-
-                  <div>
-                    <label for="dropoff">Drop-off Location:</label>
-                    <input
-                      type="text"
-                      id="dropoff"
-                      name="dropoff"
-                      placeholder="Enter drop-off location"
-                    />
-                  </div>
-
-                  <div>
-                    <label for="pickup">Pick-up Location:</label>
-                    <input
-                      type="text"
-                      id="pickup"
-                      name="pickup"
-                      placeholder="Enter the pick-up location"
-                    />
-                  </div>
-
-                  <div>
-                    <label for="pickupDate">Pick-up Date:</label>
-                    <input type="date" id="pickupDate" name="pickupDate" />
-                  </div>
-
-                  <div>
-                    <label for="dropoffDate">Drop-off Date:</label>
-                    <input type="date" id="dropoffDate" name="dropoffDate" />
-                  </div>
-                  <button>Submit</button>
-                </form>
+            <swiper-slide>
+              <div class="slide-content">
+                <img src="./img/car-2.png" alt="Car 2" />
+                <h2>Car Model 2</h2>
               </div>
-              <div class="addver">
-                <h1>Get 15% off your rental Plan your trip now</h1>
-                <p>Treat yourself in India</p>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="slide-content">
+                <img src="./img/car-3.png" alt="Car 3" />
+                <h2>Car Model 3</h2>
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div class="slide-content">
+                <img src="./img/car-4.png" alt="Car 4" />
+                <h2>Car Model 4</h2>
               </div>
             </swiper-slide>
           </swiper-container>
         </div>
-      </section>
-
-      <!-- Features Section -->
-      <section id="CF">
-        <div class="Cen">
-          <div class="top">
-            <h1><span class="h">Central</span> Features</h1>
-            <p class="top-para">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet
-              nemo expedita asperiores commodi accusantium at cum harum,
-              excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam
-              quia distinctio.
-            </p>
-          </div>
-
-          <div class="bottom">
-            <div>
-              <div class="feature">
-                <div class="ic l"><i class="fa-solid fa-trophy"></i></div>
-                <div>
-                  <h1>First Class Services</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur, in illum aperiam ullam magni eligendi?
-                  </p>
-                </div>
-              </div>
-              <div class="feature">
-                <div class="ic l"><i class="fa-solid fa-road"></i></div>
-                <div>
-                  <h1>24/7 Road Assistance</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur, in illum aperiam ullam magni eligendi?
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <img src="./img/car-1.png" alt="Car Image" class="car-image" />
-            </div>
-
-            <div>
-              <div class="feature">
-                <div class="ic r"><i class="fa-solid fa-tag"></i></div>
-                <div>
-                  <h1>Quality at Minimum</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur, in illum aperiam ullam magni eligendi?
-                  </p>
-                </div>
-              </div>
-              <div class="feature">
-                <div class="ic r"><i class="fa-solid fa-map-pin"></i></div>
-                <div>
-                  <h1>Free Pick-Up & Drop-Off</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur, in illum aperiam ullam magni eligendi?
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about">
-  <div class="ab-left">
-    <h2><span class="blue">Cental</span> <span class="red">About</span></h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-
-    <div class="features">
-      <div class="feature-card">
-        <img src="./img/about-icon-1.png" alt="Vision Icon" />
-        <h3>Our Vision</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
-      <div class="feature-card">
-        <img src="./img/about-icon-2.png" alt="Mission Icon" />
-        <h3>Our Mission</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="about-us">
+        <h1>About us</h1>
+        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          consectetur adipiscing elit.</p>
+      </div>
+      <div class="contact-us">
+        <h1>Contact us</h1>
+        <p><i class="fa-solid fa-location-dot"></i> 123 Main St, City, Country</p>
+        <p><i class="fa-solid fa-phone"></i> +123 456 7890</p>
+        <p><i class="fa-solid fa-envelope">rental@email.com</i>
+      </div>
+      <div>
+        <h1>Business Hours</h1>
+        <ul>
+          <li>Mon - Friday: 09.00 am to 07.00 pm</li>
+          <li>Saturday: 10.00 am to 05.00 pm</li>
+          <li>Vacation:All Sunday is our vacation</li>
+        </ul>
       </div>
     </div>
+  </footer>
 
-    <p class="subtext">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit...
-    </p>
-
-    <div class="experience-box">
-      <h1>17</h1>
-      <p>Years Of Experience</p>
-    </div>
-
-    <ul class="benefits">
-      <li>✅ Morbi tristique senectus</li>
-      <li>✅ A scelerisque purus</li>
-      <li>✅ Dictumst vestibulum</li>
-      <li>✅ dio aenean sed adipiscing</li>
-    </ul>
-  </div>
-
-  <div class="ab-right">
-    <img src="./img/about-img.jpg" class="im-1" />
-    <img src="./img/about-img-1.jpg" class="im-2" />
-  </div>
-</section>
-<section id="stats">
-        <div id="stats-in">
-          <div class="stats-co">
-            <i class="fa-solid fa-thumbs-up stat-ic"></i>
-            <h1>829+</h1>
-            <p>Happy Clients</p>
-          </div>
-          <div class="stats-co">
-            <i class="fa-solid fa-car stat-ic"></i>
-            <h1>56+</h1>
-            <p>Number of Cars</p>
-          </div>
-          <div class="stats-co">
-            <i class="fa-solid fa-building stat-ic"></i>
-            <h1>127+</h1>
-            <p>Car Center</p>
-          </div>
-          <div class="stats-co">
-            <i class="fa-solid fa-clock stat-ic"></i>
-            <h1>589+</h1>
-            <p>Total Kilometers</p>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="Services">
-  <div class="ser-container">
-    <h1>Central <span>Services</span></h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,</p>
-    <div class="ser-con">
-      <div class="ser-item">
-        <i class="fa-solid fa-phone"></i>
-        <h1>Phone Reservation</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
-      </div>
-      <div class="ser-item">
-        <i class="fa-sharp fa-solid fa-money-bill"></i>
-        <h1>Special Rates</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
-      </div>
-      <div class="ser-item">
-        <i class="fa-solid fa-road"></i>
-        <h1>One Way Rental</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
-      </div>
-      <div class="ser-item">
-        <i class="fa-solid fa-umbrella"></i>
-        <h1>Life Insurance</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
-      </div>
-      <div class="ser-item">
-        <i class="fa-solid fa-building"></i>
-        <h1>City to City</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
-      </div>
-      <div class="ser-item">
-        <i class="fa-solid fa-car"></i>
-        <h1>Free Rides</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, itaque odio pariatur sit impedit nihil?</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-      <section id="categories">
-        <div class="sa-con">
-          <h1>Our Categories</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat veritatis omnis cum praesentium incidunt distinctio qui? Quis, temporibus animi corporis minima, aliquid vitae eaque dignissimos, odio cupiditate doloremque tempora ducimus.
-          </p>
-          <div class="ban">
-            <swiper-container
-            class="mySwiper"
-            pagination="true"
-            pagination-clickable="true"
-            slides-per-view="auto"
-            space-between="20"
-          >
-              <swiper-slide>
-                <div class="slide-content">
-                  <img src="./img/car-1.png" alt="Car 1" />
-                  <h2>Car Model 1</h2>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="slide-content">
-                  <img src="./img/car-2.png" alt="Car 2" />
-                  <h2>Car Model 2</h2>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="slide-content">
-                  <img src="./img/car-3.png" alt="Car 3" />
-                  <h2>Car Model 3</h2>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="slide-content">
-                  <img src="./img/car-4.png" alt="Car 4" />
-                  <h2>Car Model 4</h2>
-                </div>
-              </swiper-slide>
-            </swiper-container>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer >
-      <div class="footer-container">
-        <div class="about-us">
-          <h1>About us</h1>
-          <p>Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
-        </div>
-        <div class="contact-us">
-          <h1>Contact us</h1>
-          <p><i class="fa-solid fa-location-dot"></i> 123 Main St, City, Country</p>
-          <p><i class="fa-solid fa-phone"></i> +123 456 7890</p>
-          <p><i class="fa-solid fa-envelope"></i>
-        </div>
-      </div>
-    </footer>
-
-    <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-  </body>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script src="./signup.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+<script>
+  AOS.init();
+</script>
 </html>
