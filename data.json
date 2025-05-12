@@ -1,24 +1,54 @@
 {
   "bookings": [
     {
-      "id": 1,
+      "id": "1",
       "carType": "SUV",
-      "name": "John Doe",
-      "pickupLocation": "New York",
-      "dropoffLocation": "Boston",
+      "name": "Divyansh",
+      "pickupLocation": "Bhopal",
+      "dropoffLocation": "Jhansi",
       "pickupDate": "2025-05-15",
       "dropoffDate": "2025-05-20",
-      "price":"500"
+      "price": "500"
     },
     {
-      "id": 2,
+      "id": "2",
       "carType": "Sedan",
-      "name": "Jane Smith",
-      "pickupLocation": "Los Angeles",
-      "dropoffLocation": "San Francisco",
+      "name": "Radhe",
+      "pickupLocation": "Bhopal",
+      "dropoffLocation": "Delhi",
       "pickupDate": "2025-05-18",
       "dropoffDate": "2025-05-22",
-      "price":"500"
+      "price": "500"
+    },
+    {
+      "id": "3b4a",
+      "carType": "SUV",
+      "name": "Lucifer",
+      "pickupLocation": "Bhopal",
+      "dropoffLocation": "Bhopal",
+      "pickupDate": "2025-05-13",
+      "dropoffDate": "2025-05-14",
+      "price": 6000
+    },
+    {
+      "id": "4a41",
+      "carType": "SUV",
+      "name": "luci",
+      "pickupLocation": "Bhopal",
+      "dropoffLocation": "indore",
+      "pickupDate": "2025-05-15",
+      "dropoffDate": "2025-05-18",
+      "price": 18000
+    },
+    {
+      "id": "4fe4",
+      "carType": "Luxury",
+      "name": "ram",
+      "pickupLocation": "Bhopal",
+      "dropoffLocation": "Goa",
+      "pickupDate": "2025-05-15",
+      "dropoffDate": "2025-05-25",
+      "price": 120000
     }
   ]
 }

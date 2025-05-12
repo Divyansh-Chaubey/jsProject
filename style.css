@@ -206,10 +206,13 @@ swiper-slide {
 
 .form form button {
     margin-top: 20px;
-    width: 120px;
+    width: auto;
     height: 50px;
     border-radius: 11px;
     text-align: center;
+    border:1px solid var(--main-color);
+    padding: 0 15px;
+    font-weight: 600;
 }
 
 .form form div {

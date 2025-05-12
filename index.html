@@ -125,7 +125,7 @@
      data-aos-offset="500"
      data-aos-easing="ease-in-sine">
               <h1>CONTINUE CAR RESERVATION</h1>
-              <form action="">
+              <form action="./booking.html"  onsubmit="return booking()">
                 <div>
                   <label for="carType">Choose Car Type:</label>
                   <select name="carType" id="carType">
@@ -144,28 +144,28 @@
 
                 <div>
                   <label for="name">Enter Your Name:</label>
-                  <input type="text" id="name" name="name" placeholder="Enter your name" />
+                  <input required type="text" id="name" name="name" placeholder="Enter your name" />
                 </div>
 
                 <div>
                   <label for="dropoff">Pick-up Location:</label>
-                  <input type="text" id="dropoff" name="dropoff" placeholder="Enter pick-up location" />
+                  <input required type="text" id="pickup" name="dropoff" placeholder="Enter pick-up location" />
                 </div>
                 <div>
                   <label for="dropoff">Drop-off Location:</label>
-                  <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" />
+                  <input required type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" />
                 </div>
 
                 <div>
                   <label for="pickupDate">Pick-up Date:</label>
-                  <input type="date" id="pickupDate" name="pickupDate" />
+                  <input required type="date" id="pickupDate" name="pickupDate" />
                 </div>
 
                 <div>
                   <label for="dropoffDate">Drop-off Date:</label>
-                  <input type="date" id="dropoffDate" name="dropoffDate" />
+                  <input type="date" id="dropoffDate" name="dropoffDate" required/>
                 </div>
-                <button>Submit</button>
+                <button type="submit" >Confirm-Booking</button>
               </form>
             </div>
             <div class="addver" data-aos="fade-left"
@@ -182,7 +182,7 @@
      data-aos-offset="500"
      data-aos-easing="ease-in-sine">
               <h1>CONTINUE CAR RESERVATION</h1>
-              <form action="">
+              <form action="./booking.html" onsubmit="return booking()">
                 <div>
                   <label for="carType">Choose Car Type:</label>
                   <select name="carType" id="carType">
@@ -201,29 +201,29 @@
 
                 <div>
                   <label for="name">Enter Your Name:</label>
-                  <input type="text" id="name" name="name" placeholder="Enter your name" />
+                  <input type="text" id="name" name="name" placeholder="Enter your name" required />
                 </div>
 
                 <div>
                   <label for="dropoff">Drop-off Location:</label>
-                  <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" />
+                  <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required/>
                 </div>
 
                 <div>
                   <label for="pickup">Pick-up Location:</label>
-                  <input type="text" id="pickup" name="pickup" placeholder="Enter the pick-up location" />
+                  <input type="text" id="pickup" name="pickup" placeholder="Enter the pick-up location" required/>
                 </div>
 
                 <div>
                   <label for="pickupDate">Pick-up Date:</label>
-                  <input type="date" id="pickupDate" name="pickupDate" />
+                  <input type="date" id="pickupDate" name="pickupDate" required/>
                 </div>
 
-                <div>
+                <div>index.html
                   <label for="dropoffDate">Drop-off Date:</label>
-                  <input type="date" id="dropoffDate" name="dropoffDate" />
+                  <input type="date" id="dropoffDate" name="dropoffDate" required/>
                 </div>
-                <button>Submit</button>
+                <button type="submit" onclick="booking()">Confirm-Booking</button>
               </form>
             </div>
             <div class="addver"   data-aos="fade-right"

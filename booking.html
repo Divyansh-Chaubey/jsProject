@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking</title>
+  <link rel="stylesheet" href="booking.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+
+<body onload="fetchData()">
+       <h1 style="text-align: center;">Booking-data</h1>
+ <div id="table-container"> 
+  <table id="bookingTable" >
+    <thead>
+      <th>ID</th>
+      <th>Car-type</th>
+      <th>Name</th>
+      <th>Pick-up Location</th>
+      <th>Drop-Off Location</th>
+      <th>Booking Date</th>
+      <th>Return Date</th>
+      <th>Price</th>
+      <th>EDit</th>
+      <th>Delete</th>
+  </thead>
+        <tbody id="element">
+            
+        </tbody>
+    </table>
+    <div><label for="ser">Search Here</label>
+    <input type="text" id="ser"></div>
+</div>
+
+
+
+
+
+  <section id="edit-form">
+    <div class="form" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+      <h1>Edit your Booking</h1>
+      <form action="">
+        <div>
+          <label for="carType">Choose Car Type:</label>
+          <select name="carType" id="carType">
+            <option value="SUV">SUV</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Hatchback">Hatchback</option>
+            <option value="Luxury">Luxury</option>
+            <option value="Convertible">Convertible</option>
+            <option value="Electric">Electric</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Van">Van</option>
+            <option value="Pickup">Pickup Truck</option>
+            <option value="Traveler">Traveler</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="name">Enter Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+
+        <div>
+          <label for="dropoff">Drop-off Location:</label>
+          <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required />
+        </div>
+
+        <div>
+          <label for="pickup">Pick-up Location:</label>
+          <input type="text" id="pickup" name="pickup" placeholder="Enter the pick-up location" required />
+        </div>
+
+        <div>
+          <label for="pickupDate">Pick-up Date:</label>
+          <input type="date" id="pickupDate" name="pickupDate" required />
+        </div>
+
+        <div>index.html
+          <label for="dropoffDate">Drop-off Date:</label>
+          <input type="date" id="dropoffDate" name="dropoffDate" required />
+        </div>
+        <button type="submit" onclick="booking()">Confirm</button>
+      </form>
+    </div>
+  </section>
+</body>
+<script src="booking.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="./signup.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+<script>
+  AOS.init();
+</script>
+
+</html>
