@@ -48,48 +48,50 @@ let fetchData = async () => {
     }
 };
 
-let del = async (id) => {
-    const url = `http://localhost:3000/bookings/${id}`;
+// let del = async (id) => {
+//     const url = `http://localhost:3000/bookings/${id}`;
 
-    try {
-        // Confirm deletion with the user
-        const confirmDelete = confirm("Are you sure you want to delete this booking?");
-        if (!confirmDelete) return;
+//     try {
+//         // Confirm deletion with the user
+//         const confirmDelete = confirm("Are you sure you want to delete this booking?");
+//         if (!confirmDelete) return;
 
-        // Send DELETE request to the server
-        let res = await fetch(url, { method: "DELETE" });
-        if (!res.ok) {
-            throw new Error(`Failed to delete booking with ID ${id}. HTTP status: ${res.status}`);
-        }
+//         // Send DELETE request to the server
+//         let res = await fetch(url, { method: "DELETE" });
+//         if (!res.ok) {
+//             throw new Error(`Failed to delete booking with ID ${id}. HTTP status: ${res.status}`);
+//         }
 
-        // Notify the user and refresh the table
-        alert("Booking deleted successfully!");
-        fetchData(); // Refresh the table
-    } catch (error) {
-        // Log and display errors
-        console.error("Error deleting booking:", error);
-        alert("An error occurred while deleting the booking. Please try again.");
+//         // Notify the user and refresh the table
+//         alert("Booking deleted successfully!");
+//         fetchData(); // Refresh the table
+//     } catch (error) {
+//         // Log and display errors
+//         console.error("Error deleting booking:", error);
+//         alert("An error occurred while deleting the booking. Please try again.");
+//     }
+// };
+
+
+
+
+
+let del=async(id)=>{
+const url = `http://localhost:3000/bookings/${id}`;
+await fetch(url,{method:"DELETE"})
+fetchData();
+}
+
+
+
+let search= async()=>{
+    let searchinp=document.querySelector("#ser").value.toLowerCase();
+    let url="http://localhost:3000/bookings";
+    let res =await fetch(url);
+    let data=await res.json();
+     let filterData=data.filter((e)=>{
+        return e.name.toLowerCase().includes(searchinp)||e.age.toString().includes(searchinp)
+     })
+
+     fetchData(filterData);
     }
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let deleteBooking=async(id)=>{
-// const url = `http://localhost:3000/bookings/${id}`;
-// await fetch(url,{method:"DELETE"})
-// fetchData();
-// }
-

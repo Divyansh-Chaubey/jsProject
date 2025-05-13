@@ -29,26 +29,6 @@
       "pickupDate": "2025-05-13",
       "dropoffDate": "2025-05-14",
       "price": 6000
-    },
-    {
-      "id": "4a41",
-      "carType": "SUV",
-      "name": "luci",
-      "pickupLocation": "Bhopal",
-      "dropoffLocation": "indore",
-      "pickupDate": "2025-05-15",
-      "dropoffDate": "2025-05-18",
-      "price": 18000
-    },
-    {
-      "id": "4fe4",
-      "carType": "Luxury",
-      "name": "ram",
-      "pickupLocation": "Bhopal",
-      "dropoffLocation": "Goa",
-      "pickupDate": "2025-05-15",
-      "dropoffDate": "2025-05-25",
-      "price": 120000
     }
   ]
 }
