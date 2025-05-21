@@ -36,7 +36,7 @@
     </table>
     <div>
       <label for="ser">Search Here</label>
-    <input type="text" id="ser" onkeypress="search()"></div>
+    <input type="text" id="ser" oninput="search()"></div>
 </div>
 
 
@@ -49,7 +49,7 @@
       <form action="">
         <div>
           <label for="carType">Choose Car Type:</label>
-          <select name="carType" id="carType">
+          <select name="carType" id="E_carType">
             <option value="SUV">SUV</option>
             <option value="Sedan">Sedan</option>
             <option value="Hatchback">Hatchback</option>
@@ -65,27 +65,27 @@
 
         <div>
           <label for="name">Enter Your Name:</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+          <input type="text" id="E_name" name="name" placeholder="Enter your name" required />
         </div>
 
         <div>
           <label for="dropoff">Drop-off Location:</label>
-          <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required />
+          <input type="text" id="E_dropoff" name="dropoff" placeholder="Enter drop-off location" required />
         </div>
 
         <div>
           <label for="pickup">Pick-up Location:</label>
-          <input type="text" id="pickup" name="pickup" placeholder="Enter the pick-up location" required />
+          <input type="text" id="E_pickup" name="pickup" placeholder="Enter the pick-up location" required />
         </div>
 
         <div>
           <label for="pickupDate">Pick-up Date:</label>
-          <input type="date" id="pickupDate" name="pickupDate" required />
+          <input type="date" id="E_pickupDate" name="pickupDate" required />
         </div>
 
         <div>index.html
           <label for="dropoffDate">Drop-off Date:</label>
-          <input type="date" id="dropoffDate" name="dropoffDate" required />
+          <input type="date" id="E_dropoffDate" name="dropoffDate" required />
         </div>
         <button type="submit" onclick="booking()">Confirm</button>
       </form>

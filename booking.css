@@ -78,7 +78,7 @@ body{
 .form {
     height: 60vh;
     width: 60vh;
-    background: var(--gradient); /* Correct usage of the gradient */
+    background: var(--gradient); 
     display: flex;
     align-items: center;
     justify-content: space-evenly;
